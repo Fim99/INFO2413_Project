@@ -1,0 +1,14 @@
+// Setup Commands [already done]
+apt-get update
+apt-get install -y mysql-server
+apt-get install -y php7.3-mbstring php7.3-mysqli phpmyadmin
+
+
+
+// Server Startup Commands (run these commands in terminal)
+service mysql start
+service apache2 restart
+sendmailconfig ('Y' to everything)
+
+// Get rid of php errors [already done]
+sudo sed -i "s/|\s*\((count(\$analyzed_sql_results\['select_expr'\]\)/| (\1)/g" /usr/share/phpmyadmin/libraries/sql.lib.php
